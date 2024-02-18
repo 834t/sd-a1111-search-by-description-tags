@@ -47,7 +47,8 @@ function setupExtraNetworksForTab(tabname) {
                 search_by_description_as_tags = true;
             }
 
-            if( search_by_description_as_tags ){
+            const showdirs = showDirs.checked;
+            if( search_by_description_as_tags && !showdirs  ){
 
                 const text_desc = elem.querySelector('.description').textContent.toLowerCase();
                 const disabledByNoDescription = text_desc === '';
