@@ -2,7 +2,7 @@
 simple extention for automatic1111 to search by description as by a list of tags (LoRa and others)
 
 
--- how to use --
+--- how to use ---
 
 1. Enable option for show description for the extra_networks in Automatic1111 settings
 
@@ -10,13 +10,13 @@ Settings > User Interface > Quicksettings list > search for `extra_networks_card
 
 2. Use default seatcrch input to search by a set of tags included in the description
 
-- cards with description: -
+-- cards with description: --
 
 1) `style, character, anime, female`
 2) `style, character, realistic, female`
 3) `character, anime, male`
 
-- usage: -
+-- usage: --
 
 Search Input: `anime, character`
 => 1, 3
