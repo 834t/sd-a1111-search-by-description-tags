@@ -8,7 +8,7 @@ simple extention for automatic1111 to search by description as by a list of tags
 
 Settings > User Interface > Quicksettings list > search for `extra_networks_card_show_desc`
 
-2. Use default seatcrch input to search by a set of tags included in the description
+2. Use default search input to search by a set of tags included in the description
 
 -- cards with description: --
 
