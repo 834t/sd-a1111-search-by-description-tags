@@ -2,7 +2,9 @@
  * 
  * Search and filtering by tags in description 
  * 
+ * b34t aka (beatwaster)
  * 
+ * https://github.com/834t/sd-a1111-search-by-description-tags
  *
  */
 (()=>{
@@ -10,24 +12,16 @@
     setupExtraNetworksForTab = function( tabname ){
         old_setupExtraNetworksForTab( tabname );
         var searchDiv = gradioApp().getElementById( tabname + '_extra_search');
-
         const clonedNode = searchDiv.cloneNode( true );
         clonedNode.id = `${tabname}_extra_search_description_as_tag`;
         clonedNode.classList.remove( 'show-dirs' );
         clonedNode.classList.add( 'search-description-as-tag' );
-
-        Object.assign( clonedNode.style, {
-            "margin" : '5px',
-        } );
-
         clonedNode.innerHTML = `<div><input type="text" width='200' id="${tabname}_extra_search_description_as_tag_input" /></div>`;
         clonedNode.style.color = `inline-block`;
-
         (new MutationObserver( function( m ){ 
             setTimeout( () => {
                 const availableZone = [ 'Lora', 'Checkpoints', 'Hypernetworks', 'Textual Inversion' ];
                 let show = false;
-                console.log( { m } );
                 for( const _m of m ){
                     const n1 = _m.addedNodes[0];
                     if( n1 &&  n1.nodeName === 'BUTTON' && n1.classList.contains('selected') && availableZone.includes( n1.innerText ) ){
@@ -37,12 +31,9 @@
                 clonedNode.style.display = show ?  `contents` : `none`;
             }, 150 );
         })).observe( searchDiv.parentNode, { childList:true }  );
-
         const clonedNodeInput = clonedNode.querySelector( 'input' );
-
         clonedNodeInput.placeholder = 'tags separeted by comma...';
         clonedNodeInput.title = 'filter extranetwork cards by the tags in their description';
-
         Object.assign( clonedNodeInput.style, {
             "position" : 'relative',
             "outline" : 'none!important',
