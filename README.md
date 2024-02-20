@@ -1,3 +1,16 @@
+Instalation:
+
+
+for install it - open extensions folder and use command:
+
+git clone https://github.com/834t/sd-a1111-search-by-description-tags.git
+
+and then go to Extensions - and click on Apply and restart UI
+
+
+
+Example:
+
 -- cards with description: --
 
 1) `style, character, anime, female`
