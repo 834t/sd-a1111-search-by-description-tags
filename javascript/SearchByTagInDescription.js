@@ -32,7 +32,7 @@
             }, 150 );
         })).observe( searchDiv.parentNode, { childList:true }  );
         const clonedNodeInput = clonedNode.querySelector( 'input' );
-        clonedNodeInput.placeholder = 'tags separeted by comma...';
+        clonedNodeInput.placeholder = 'tags separated by comma...';
         clonedNodeInput.title = 'filter extranetwork cards by the tags in their description';
         Object.assign( clonedNodeInput.style, {
             "position" : 'relative',
